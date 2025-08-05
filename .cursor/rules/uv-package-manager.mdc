@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Python Package Management with uv
+
+Use **uv** exclusively for Python package management in all projects.  
+All dependency definitions **must be declared in `pyproject.toml`**.
+
+## Package Management Commands
+
+- All Python dependencies **must be installed, synchronized, and locked** using uv
+- Never use pip, pip-tools, poetry, or conda directly for dependency management
+- Never use ad-hoc `requirements.txt` or `requirements.uv` files
+
+Use these commands:
+
+- Add dependencies (updates `pyproject.toml` automatically):  
+  `uv add <package>`
+- Remove dependencies:  
+  `uv remove <package>`
+- Sync dependencies defined in `pyproject.toml`:  
+  `uv sync`
+- Upgrade all dependencies to their latest compatible versions:  
+  `uv upgrade`
+
+## Running Python Code
+
+- Run a Python script:  
+  `uv run <script-name>.py`
+- Run Python tools like Pytest or Ruff:  
+  `uv run pytest`  
+  `uv run ruff`
+- Launch a Python REPL:  
+  `uv run python`
+
+## Additional Notes
+
+- `pyproject.toml` is the **single source of truth** for project dependencies
+- Ensure `pyproject.toml` and `uv.lock` are committed to version control
+- If migrating from other tools, convert existing lock files to `pyproject.toml` format before using uv
