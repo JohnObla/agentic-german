@@ -95,7 +95,7 @@ Get Item Agent → Word Type Agent → Word Context Agent → Image Downloader A
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd agentic-german-learning
+   cd agentic-german
    ```
 
 2. **Install dependencies:**
@@ -355,7 +355,7 @@ Available test modules:
 ## Project Structure
 
 ```
-agentic-german-learning/
+agentic-german/
 ├── main.py                     # Main execution script
 ├── pyproject.toml             # Dependencies and configuration
 ├── src/
